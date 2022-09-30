@@ -17,7 +17,7 @@ const ResultScreen = () => {
   const matchesSm = useMediaQuery(theme.breakpoints.up('sm'));
 
   const { state } = useLocation();
-  const { results } = state;
+  const { results, searchText } = state;
 
   const [page, setPage] = useState(FIRST_PAGE);
   const [lastPage, setLastPage] = useState(MAX_RESULTS);
@@ -45,9 +45,9 @@ const ResultScreen = () => {
   }
 
   return (
-    <Box sx={{ color: "transparent" }}>
+    <Box sx={{ backgroundColor: '#97B3BF' }}>
       <Navigation />
-      <Stack alignItems="center">
+      <Stack sx={{ pt: { xs: 10, sm: 12, lg: 14 } }} alignItems="center">
         {results.slice(firstPage, lastPage).map((result) => {
           return (
             <Box key={result.ID} width='100%'>
@@ -55,9 +55,11 @@ const ResultScreen = () => {
                 id={result.ID}
                 documentNameWithExtension={result.document_name_with_extension ?? ""}
                 snippet={result.snippet ?? ""}
+                summary={result.summary ?? ""}
                 fileExtension={result.file_extension ?? ""}
                 documentPath={result.document_path ?? '#'}
                 documentName={result.document_name ?? ""}
+                spotWord={searchText ?? ""}
               />}
               {/* <Divider /> */}
             </Box>
@@ -79,7 +81,7 @@ const ResultScreen = () => {
           />
         }
       </Stack>
-    </Box>
+    </Box >
   )
 
 };

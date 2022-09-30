@@ -2,21 +2,31 @@ import React, { useState } from "react";
 import { useTheme } from "@mui/material/styles";
 import { Card, CardContent, Stack, Box, Typography, Link } from "@mui/material";
 import FTIcon from "react-file-type-icons";
+import DOMPurify from 'dompurify';
 
 const Result = (props) => {
+  const theme = useTheme();
+
   const [clicked, setClicked] = useState(false);
 
-  const theme = useTheme();
+  /**
+ * Make keywords in a text bold
+ * @param {*} text a text
+ * @param {*} keyword word to be made bold 
+ * @returns 
+ */
+  const makeBold = (text, keyword) => {
+    if (keyword == null || keyword == "*") return text;
+
+    const regex = new RegExp(keyword, "gi");
+    return text.replace(regex, `<b>${keyword}</b>`);
+  }
 
   return (
     <Card onClick={() => setClicked(!clicked)} sx={{ margin: 2, borderRadius: 1 }}>
       <CardContent>
         <Stack spacing={{ xs: 1, sm: 2 }} padding="5px">
-          <Stack
-            direction="row"
-            alignItems="center"
-            spacing={{ xs: "none", sm: 2 }}
-          >
+          <Stack direction="row" alignItems="center" spacing={{ xs: "none", sm: 2 }}>
             <Box sx={{ display: { xs: "none", sm: "inline" } }}>
               <FTIcon
                 fileName={props.documentNameWithExtension}
@@ -25,48 +35,36 @@ const Result = (props) => {
                 colorType="multiColor"
               />
             </Box>
-            <Stack>
-              <Typography
-                variant="caption"
-                sx={{
-                  display: "-webkit-box",
-                  overflow: "hidden",
-                  WebkitBoxOrient: "vertical",
-                  WebkitLineClamp: 1,
-                }}
-              >
-                {props.documentPath}
-              </Typography>
+            <Box>
               <Link
                 href={props.documentPath}
                 underline="hover"
                 variant="h6"
                 target="_blank"
                 rel="noreferrer"
+                sx={{}}
               >
                 {props.documentName}
               </Link>
-              <Typography
-                variant="subtitle2"
-                sx={{ display: { xs: "flex", sm: "none" } }}
-              >
+              <Typography variant="caption" sx={{ display: { xs: "flex", sm: "none" } }}>
                 {props.fileExtension.substring(1)}
               </Typography>
-            </Stack>
+            </Box>
           </Stack>
 
           {clicked ? (
             <Typography
               variant="body2"
-              sx={{
+              dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(makeBold(props.summary, props.spotWord)) }}
+              sx={(theme) => ({
                 display: "-webkit-box",
                 overflow: "hidden",
                 WebkitBoxOrient: "vertical",
-                WebkitLineClamp: 3,
-              }}
-            >
-              AAAAAAAAAA
-            </Typography>
+                [theme.breakpoints.down("sm")]: {
+                  WebkitLineClamp: 20,
+                }
+              })}
+            />
           ) : (
             <Typography
               variant="body2"

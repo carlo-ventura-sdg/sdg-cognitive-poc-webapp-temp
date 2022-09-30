@@ -59,7 +59,7 @@ const ResultScreen = () => {
                 documentPath={result.document_path ?? '#'}
                 documentName={result.document_name ?? ""}
               />}
-              <Divider />
+              {/* <Divider /> */}
             </Box>
           )
         })}

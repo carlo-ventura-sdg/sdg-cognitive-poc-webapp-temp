@@ -17,9 +17,9 @@ const indexes = {
 const SearchBar = () => {
     const navigate = useNavigate();
     const { state } = useLocation();
-    const oldSearchText = state?.searchText;
+    const { searchText : oldSearchText } = state ?? DEFAULT_SEARCH_TEXT;
 
-    const [searchText, setSearchText] = useState(oldSearchText ?? DEFAULT_SEARCH_TEXT);
+    const [searchText, setSearchText] = useState(oldSearchText);
     const [results, setResults] = useState(jsonData.value);
 
     useEffect(() => {

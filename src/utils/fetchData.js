@@ -1,6 +1,5 @@
 import axios from "axios";
-import { json } from "react-router-dom";
-import jsonData from '../assets/test.json';
+import { putToCache, getFromCache, CACHE_NAME } from '../utils/cacheUtil';
 
 export const config = {
     method: 'get',
@@ -26,24 +25,32 @@ export const fetchData = async (config) => {
 
     // console.log(data.results);
     // return data.results;
-}
+};
 
 
 var myHeaders = new Headers();
 myHeaders.append("api-key", "z0g9549K0sn9NxcpaKXoAywsHVRinIPyjnawzlQW6dAzSeCrxKfu");
 
 var requestOptions = {
-  method: 'GET',
-  mode: 'no-cors',
-  headers: myHeaders,
-  redirect: 'follow'
+    method: 'GET',
+    mode: 'no-cors',
+    headers: myHeaders,
+    redirect: 'follow'
 };
 
 export const fetchData2 = async (config) => {
+
+    const cachedData = await getFromCache(CACHE_NAME, config.url)
+        .then((response) => response?.json());
+
+    if (cachedData) return cachedData;
+
     const data = await fetch("https://searchercloudservices.search.windows.net/indexes/index-pdf-demo/docs?api-version=2021-04-30-Preview&search=*", requestOptions)
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error));
+        .then(response => response.text())
+        .then(result => console.log(result))
+        .catch(error => console.log('error', error));
+
+    putToCache(CACHE_NAME, config.url, new Response(JSON.stringify(data)));
 
     return data || [];
-}
+};

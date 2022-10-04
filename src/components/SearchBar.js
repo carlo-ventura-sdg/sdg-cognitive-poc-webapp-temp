@@ -6,7 +6,9 @@ import { TextField, Stack, Button, Autocomplete } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
 import { fetchData, config, fetchData2 } from '../utils/fetchData';
-import jsonData from '../assets/test.json';
+
+import jsonIndex from '../assets/json_index.json';
+import dbIndex from '../assets/db_index.json';
 
 const DEFAULT_SEARCH_TEXT = "";
 const indexes = {
@@ -17,28 +19,65 @@ const indexes = {
 const SearchBar = () => {
     const navigate = useNavigate();
     const { state } = useLocation();
-    const { searchText: oldSearchText } = state ?? DEFAULT_SEARCH_TEXT;
+    const lastSearchText = state?.searchText || DEFAULT_SEARCH_TEXT;
 
-    const [searchText, setSearchText] = useState(oldSearchText);
+    const [searchText, setSearchText] = useState(lastSearchText);
     // const [results, setResults] = useState([]);
-
-    useEffect(() => {
-        setSearchText(oldSearchText);
-    }, [oldSearchText]);
 
     /**
      * Fetchs data from APIs
      */
     const fetchResults = async () => {
-        // const fetchConfig = {};
-        // Object.assign(fetchConfig, config);
-        // fetchConfig.url = `${process.env.REACT_APP_API_BASE_URL}/indexes/${indexes.indexPDF}/` +
-        //     `docs?api-version=${process.env.REACT_APP_API_VERSION}&search=${searchText}`;
 
-        // const data = await fetchData(fetchConfig);
+        var data = [];
 
-        return await fetchData2();
+        for (const [key, index] of Object.entries(indexes)) {
+            const searchParam = searchText === "" ? "*" : searchText;
+            const url = `${process.env.REACT_APP_API_BASE_URL}/indexes/${index}/` +
+                `docs?api-version=${process.env.REACT_APP_API_VERSION}&search=${searchParam}`;
+
+            const fetchConfig = {};
+            Object.assign(fetchConfig, config);
+            fetchConfig.url = url;
+
+            // data.index = await fetchData(fetchConfig);
+            // data[index] = await fetchData2(fetchConfig);
+
+            if (index === "index-db-demo") {
+                const dbIndexChg = [];
+
+                dbIndex.value.forEach(element => {
+
+                    const dbData = {}
+                    const description = {}
+
+                    for (const [key, value] of Object.entries(element)) {
+                        switch (key) {
+                            case '@search.score':
+                                dbData[key] = value;
+                                break;
+                            case 'id':
+                                dbData.ID = value;
+                                break;
+                            default:
+                                description[key] = value;
+                        }
+                    }
+
+                    dbData.description = description;
+                    dbIndexChg.push(dbData);
+
+                });
+
+                data = data.concat(dbIndexChg);
+            }
+            else {
+                data = data.concat(jsonIndex.value);
+            }
+        }
+        return data;
     }
+
 
     /**
      * Handles  search text updates.

@@ -1,0 +1,406 @@
+{
+    "@odata.context": "https://searchercloudservices.search.windows.net/indexes('index-db-demo')/$metadata#docs(*)",
+    "value": [
+        {
+            "@search.score": 1.0,
+            "id": "823",
+            "CUSTOMER_DESC": "Customer_24",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Rome",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "824",
+            "CUSTOMER_DESC": "Customer_25",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Rome",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "844",
+            "CUSTOMER_DESC": "Customer_45",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Florence",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "846",
+            "CUSTOMER_DESC": "Customer_47",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Florence",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "857",
+            "CUSTOMER_DESC": "Customer_58",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "859",
+            "CUSTOMER_DESC": "Customer_60",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "871",
+            "CUSTOMER_DESC": "Customer_72",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "926",
+            "CUSTOMER_DESC": "Customer_127",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "LEICESTER",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "929",
+            "CUSTOMER_DESC": "Customer_130",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "MANCHESTER",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "941",
+            "CUSTOMER_DESC": "Customer_142",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "HALDANE",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "943",
+            "CUSTOMER_DESC": "Customer_144",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "HALDANE",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "966",
+            "CUSTOMER_DESC": "Customer_167",
+            "COUNTRY_CODE": "AE",
+            "CITY_DESC": "Dubai",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "974",
+            "CUSTOMER_DESC": "Customer_175",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "976",
+            "CUSTOMER_DESC": "Customer_177",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "980",
+            "CUSTOMER_DESC": "Customer_181",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "806",
+            "CUSTOMER_DESC": "Customer_7",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Giovinazzo",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "1005",
+            "CUSTOMER_DESC": "Customer_206",
+            "COUNTRY_CODE": "US",
+            "CITY_DESC": "Denver",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "804",
+            "CUSTOMER_DESC": "Customer_5",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Milan",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "809",
+            "CUSTOMER_DESC": "Customer_10",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Turin",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "851",
+            "CUSTOMER_DESC": "Customer_52",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Florence",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "854",
+            "CUSTOMER_DESC": "Customer_55",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Florence",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "860",
+            "CUSTOMER_DESC": "Customer_61",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "922",
+            "CUSTOMER_DESC": "Customer_123",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "LEICESTER",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "942",
+            "CUSTOMER_DESC": "Customer_143",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "HALDANE",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "947",
+            "CUSTOMER_DESC": "Customer_148",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "HALDANE",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "979",
+            "CUSTOMER_DESC": "Customer_180",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "991",
+            "CUSTOMER_DESC": "Customer_192",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "994",
+            "CUSTOMER_DESC": "Customer_195",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "814",
+            "CUSTOMER_DESC": "Customer_15",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Rome",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "817",
+            "CUSTOMER_DESC": "Customer_18",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Rome",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "842",
+            "CUSTOMER_DESC": "Customer_43",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Florence",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "852",
+            "CUSTOMER_DESC": "Customer_53",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Florence",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "853",
+            "CUSTOMER_DESC": "Customer_54",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Florence",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "868",
+            "CUSTOMER_DESC": "Customer_69",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "885",
+            "CUSTOMER_DESC": "Customer_86",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "887",
+            "CUSTOMER_DESC": "Customer_88",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "899",
+            "CUSTOMER_DESC": "Customer_100",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "902",
+            "CUSTOMER_DESC": "Customer_103",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "915",
+            "CUSTOMER_DESC": "Customer_116",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "LEICESTER",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "946",
+            "CUSTOMER_DESC": "Customer_147",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "HALDANE",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "975",
+            "CUSTOMER_DESC": "Customer_176",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "989",
+            "CUSTOMER_DESC": "Customer_190",
+            "COUNTRY_CODE": "RU",
+            "CITY_DESC": "Moscow",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "1000",
+            "CUSTOMER_DESC": "Customer_201",
+            "COUNTRY_CODE": "US",
+            "CITY_DESC": "Denver",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "813",
+            "CUSTOMER_DESC": "Customer_14",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Rome",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "818",
+            "CUSTOMER_DESC": "Customer_19",
+            "COUNTRY_CODE": "IT",
+            "CITY_DESC": "Rome",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "878",
+            "CUSTOMER_DESC": "Customer_79",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "905",
+            "CUSTOMER_DESC": "Customer_106",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "908",
+            "CUSTOMER_DESC": "Customer_109",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "London",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "938",
+            "CUSTOMER_DESC": "Customer_139",
+            "COUNTRY_CODE": "GB",
+            "CITY_DESC": "MANCHESTER",
+            "CURRENCY_CODE": "EUR"
+        },
+        {
+            "@search.score": 1.0,
+            "id": "954",
+            "CUSTOMER_DESC": "Customer_155",
+            "COUNTRY_CODE": "BR",
+            "CITY_DESC": "San Paolo",
+            "CURRENCY_CODE": "EUR"
+        }
+    ],
+    "@odata.nextLink": "https://searchercloudservices.search.windows.net/indexes('index-db-demo')/docs?api-version=2021-04-30-Preview&search=%2A&$skip=50"
+}

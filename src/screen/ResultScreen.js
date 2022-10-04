@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import { Stack, Pagination, Divider, Box } from '@mui/material';
+import { Stack, Pagination, Box } from '@mui/material';
 
 import Navigation from '../components/Navigation';
 import Result from '../components/Result';
@@ -20,8 +20,8 @@ const ResultScreen = () => {
   const { results, searchText } = state;
 
   const [page, setPage] = useState(FIRST_PAGE);
-  const [lastPage, setLastPage] = useState(MAX_RESULTS);
-  const [firstPage, setFirstPage] = useState();
+  const [pageLastResult, setPageLastResult] = useState(FIRST_PAGE);
+  const [pageFirstResult, setPageFirstResult] = useState(FIRST_PAGE);
 
   // Divides results in pages
   useEffect(() => {
@@ -31,8 +31,8 @@ const ResultScreen = () => {
 
     var first = MAX_RESULTS * (page - 1);
 
-    setLastPage(last);
-    setFirstPage(first);
+    setPageLastResult(last);
+    setPageFirstResult(first);
   }, [page]);
 
   /**
@@ -48,10 +48,10 @@ const ResultScreen = () => {
     <Box sx={{ backgroundColor: '#97B3BF' }}>
       <Navigation />
       <Stack sx={{ pt: { xs: 10, sm: 12, lg: 14 } }} alignItems="center">
-        {results.slice(firstPage, lastPage).map((result) => {
+        {results.slice(pageFirstResult, pageLastResult).map((result) => {
           return (
             <Box key={result.ID} width='100%'>
-              {<Result
+              <Result
                 id={result.ID}
                 documentNameWithExtension={result.document_name_with_extension ?? ""}
                 snippet={result.snippet ?? ""}
@@ -60,8 +60,7 @@ const ResultScreen = () => {
                 documentPath={result.document_path ?? '#'}
                 documentName={result.document_name ?? ""}
                 spotWord={searchText ?? ""}
-              />}
-              {/* <Divider /> */}
+              />
             </Box>
           )
         })}

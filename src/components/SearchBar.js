@@ -17,10 +17,10 @@ const indexes = {
 const SearchBar = () => {
     const navigate = useNavigate();
     const { state } = useLocation();
-    const { searchText : oldSearchText } = state ?? DEFAULT_SEARCH_TEXT;
+    const { searchText: oldSearchText } = state ?? DEFAULT_SEARCH_TEXT;
 
     const [searchText, setSearchText] = useState(oldSearchText);
-    const [results, setResults] = useState(jsonData.value);
+    // const [results, setResults] = useState([]);
 
     useEffect(() => {
         setSearchText(oldSearchText);
@@ -37,8 +37,7 @@ const SearchBar = () => {
 
         // const data = await fetchData(fetchConfig);
 
-        const data = await fetchData2();
-        // setResults(data);
+        return await fetchData2();
     }
 
     /**
@@ -69,8 +68,10 @@ const SearchBar = () => {
      * Redirects to ResultScreen.
      */
     const goToResultScreen = () => {
-        fetchResults();
-        navigate('/result', { state: { results: results, searchText: searchText } });
+        fetchResults()
+            .then((data) =>
+                navigate('/result', { state: { results: data, searchText: searchText } })
+            );
     }
 
     return (

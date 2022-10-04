@@ -1,4 +1,6 @@
 import axios from "axios";
+import { json } from "react-router-dom";
+import jsonData from '../assets/test.json';
 
 export const config = {
     method: 'get',
@@ -43,5 +45,5 @@ export const fetchData2 = async (config) => {
     .then(result => console.log(result))
     .catch(error => console.log('error', error));
 
-    // console.log(data);
+    return data || [];
 }

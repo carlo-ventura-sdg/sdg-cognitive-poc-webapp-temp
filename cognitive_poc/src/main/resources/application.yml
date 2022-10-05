@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  forward-headers-strategy: framework
+  servlet:
+    context-path: /dev
+
+feign:
+  okhttp:
+    enabled: true
+  client:
+    config:
+      AzureFeignClient:
+        url: https://searchercloudservices.search.windows.net/indexes/index-pdf-demo/docs
+        connectTimeout: 500000
+        readTimeout: 500000
+        loggerLevel: basic
